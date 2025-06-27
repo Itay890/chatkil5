@@ -2,67 +2,81 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="אתר Chatkil5 של Itay Trank - מרכז לפרויקטים טכנולוגיים, קוד פתוח, למידת מכונה, ואוטומציה לבני נוער ומתכנתים מתחילים." />
-  <meta name="keywords" content="Chatkil5, קוד פתוח, בינה מלאכותית, איתי טראנק, זיהוי תמונה, פרויקט תכנות, אתר לילדים, Python, קוד למתחילים, מפתחים צעירים, תכנות לילדים, אתר תכנות לילדים, תכנות בעברית" />
+  <meta name="keywords" content="Chatkil5, קוד פתוח, בינה מלאכותית, איתי טראנק, זיהוי תמונה, פרויקט תכנות, אתר לילדים, Python, קוד למתחילים, מפתחים צעירים, תכנות לילדים, תכנות בעברית" />
   <meta name="robots" content="index, follow" />
   <meta name="google-site-verification" content="_wRTdMNekqrsZJ4aFMmfv3Z9C3n-VpJzlya6xy6OUtQ" />
-  
+
   <title>Chatkil5 - האתר הרשמי</title>
-  
-  <!-- Open Graph / Facebook -->
+
+  <!-- Performance hints -->
+  <link rel="dns-prefetch" href="//app--chat-kil5-pro-copy-3f1d576c.base44.app" />
+  <link rel="preconnect" href="https://app--chat-kil5-pro-copy-3f1d576c.base44.app" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Chatkil5 - האתר הרשמי" />
   <meta property="og:description" content="אתר Chatkil5 של Itay Trank - מרכז לפרויקטים טכנולוגיים, קוד פתוח, למידת מכונה, ואוטומציה לבני נוער ומתכנתים מתחילים." />
   <meta property="og:url" content="https://app--chat-kil5-pro-copy-3f1d576c.base44.app/" />
   <meta property="og:locale" content="he_IL" />
-  <!-- הוסף כאן תמונת מיני-שיתוף אם יש -->
-  <!--<meta property="og:image" content="https://example.com/path/to/image.jpg" />-->
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Chatkil5 - האתר הרשמי" />
   <meta name="twitter:description" content="אתר Chatkil5 של Itay Trank - מרכז לפרויקטים טכנולוגיים, קוד פתוח, למידת מכונה, ואוטומציה לבני נוער ומתכנתים מתחילים." />
-  <!--<meta name="twitter:image" content="https://example.com/path/to/image.jpg" />-->
 
-  <!-- קישורי קנוניקל (canonical) -->
+  <!-- Canonical -->
   <link rel="canonical" href="https://app--chat-kil5-pro-copy-3f1d576c.base44.app/" />
 
   <style>
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #212529;
       background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      color: #212529;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 50px 20px;
     }
-
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+    }
+    .topnav a {
+      color: #f2f2f2;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+      transition: 0.3s;
+    }
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+    main { padding: 50px 20px; }
     h1 {
       font-size: 3em;
       margin-bottom: 20px;
       color: #dc3545;
     }
-
     h2 {
       font-size: 2em;
       margin-top: 40px;
       margin-bottom: 20px;
       color: #333;
     }
-
     p {
       font-size: 1.2em;
       margin-bottom: 30px;
       line-height: 1.6;
     }
-
-    a {
+    a.button {
       display: inline-block;
       padding: 12px 24px;
       background-color: #dc3545;
@@ -72,36 +86,25 @@
       border-radius: 8px;
       transition: background-color 0.3s ease;
     }
-
-    a:hover {
+    a.button:hover {
       background-color: #bb2d3b;
     }
-
     footer {
       margin-top: 40px;
       font-size: 0.9em;
       color: gray;
+      padding: 20px;
     }
-
-    /* קישור מוסתר לסריקה של גוגל */
-    .hidden-sitemap-link {
-      display: none;
-    }
-
+    .hidden-sitemap-link { display: none; }
+    section { display: none; }
+    section.active { display: block; }
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-      }
-      h2 {
-        font-size: 1.5em;
-      }
-      p {
-        font-size: 1em;
-      }
+      h1 { font-size: 2em; }
+      h2 { font-size: 1.5em; }
+      p  { font-size: 1em; }
     }
   </style>
 
-  <!-- JSON-LD Schema.org structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -118,38 +121,65 @@
   </script>
 </head>
 <body dir="rtl">
+
+  <!-- תפריט ניווט -->
+  <div class="topnav">
+    <a href="#" class="active" onclick="showSection('home', this)">ראשי</a>
+    <a href="#" onclick="showSection('about', this)">אודות</a>
+    <a href="#" onclick="showSection('news', this)">חדשות</a>
+  </div>
+
+  <!-- תוכן -->
   <main>
-    <h1>ברוכים הבאים ל-Chatkil5!</h1>
+    <section id="home" class="active">
+      <h1>ברוכים הבאים ל-Chatkil5!</h1>
+      <p>זהו הדף הרשמי של הפרויקט שלי, שנבנה לגמרי על ידי ילד בן 12 בשם איתי טרנק.</p>
+      <h2>מה תוכלו למצוא באתר?</h2>
+      <p>כלים חכמים, קודים בפייתון, מערכות בינה מלאכותית, מערכות לזיהוי תמונה, אוטומציה מתקדמת, מדריכים להורדה, והכול בעברית ובשפה פשוטה למתחילים.</p>
+      <h2>המטרה שלי</h2>
+      <p>לעודד ילדים ובני נוער להיכנס לעולם התכנות, לפתח בעצמם ולחלום בגדול.</p>
+      <h2>מה חדש ב־Chatkil5?</h2>
+      <p>פרויקטים אמיתיים, קבצי PDF, סרטונים, ואפשרות לרכוש קוד סמלי במחיר נגיש.</p>
+      <h2>חזון האתר</h2>
+      <p>בניית קהילה של מפתחים צעירים, ללמוד יחד ולהתקדם בטכנולוגיה.</p>
+      <h2>הצטרפו למהפכה!</h2>
+      <p>חקור את Chatkil5 ותגלה עולמות חדשים!</p>
+      <a class="button" href="https://app--chat-kil5-pro-copy-3f1d576c.base44.app/" target="_blank">כניסה לאתר</a>
+    </section>
 
-    <p>זהו הדף הרשמי של הפרויקט שלי, שנבנה לגמרי על ידי ילד בן 12 בשם איתי טרנק.</p>
+    <section id="about">
+      <h1>אודות האתר</h1>
+      <p><strong>Chatkil5</strong> הוא מיזם טכנולוגי חדשני המיועד לבני נוער בישראל, שנבנה על ידי ילד בן 12 – איתי טרנק. מטרת האתר היא להנגיש ידע תכנותי, כלים חכמים וקוד פתוח – בעברית, ובחינם.</p>
+      <h2>מי אני?</h2>
+      <p>אני איתי, חובב קוד, בינה מלאכותית ופיתוח אתרים. אני מאמין שכל ילד יכול להתחיל ללמוד תכנות ולהתקדם – גם בלי ידע קודם או קורסים יקרים.</p>
+      <h2>למה בניתי את Chatkil5?</h2>
+      <p>כי אין מספיק אתרים בעברית שמדברים בגובה העיניים, מלמדים באמת, ומעודדים יצירה חופשית. כאן תמצאו כלים, דוגמאות, מדריכים וקהילה.</p>
+    </section>
 
-    <h2>מה תוכלו למצוא באתר?</h2>
-    <p>כלים חכמים, קודים בפייתון, מערכות בינה מלאכותית, מערכות לזיהוי תמונה, אוטומציה מתקדמת, מדריכים להורדה, והכול בעברית ובשפה פשוטה למתחילים.</p>
-
-    <h2>המטרה שלי</h2>
-    <p>לעודד ילדים ובני נוער להיכנס לעולם התכנות, לפתח בעצמם ולחלום בגדול. אני מאמין שכל אחד יכול להתחיל גם בלי ידע קודם.</p>
-
-    <h2>מה חדש ב־Chatkil5?</h2>
-    <p>אני משתף פרויקטים אמיתיים, עם קבצי PDF להורדה, הסברים ברורים, סרטוני וידאו, וגם אפשרות לתרום או לרכוש קוד סמלי במחיר נגיש לכל אחד.</p>
-
-    <h2>חזון האתר</h2>
-    <p>בניית קהילה של מפתחים צעירים מכל הארץ, ללמוד אחד מהשני ולהתקדם יחד בטכנולוגיה.</p>
-
-    <h2>הצטרפו למהפכה!</h2>
-    <p>אם הגעתם עד לכאן – אתם מוזמנים לחקור את Chatkil5 ולגלות עולמות חדשים של תכנות וכיף! הצטרפו למהפכה של הדור הצעיר בחדשנות ישראלית.</p>
-
-    <a href="https://app--chat-kil5-pro-copy-3f1d576c.base44.app/" target="_blank" rel="noopener noreferrer">
-      לחצו כאן להיכנס לאתר
-    </a>
+    <section id="news">
+      <h1>חדשות ועדכונים</h1>
+      <p>🚀 האתר עלה לאוויר בגרסה חדשה ומתקדמת עם תמיכה מלאה בעברית!</p>
+      <p>📥 נוספו מדריכים חדשים בפייתון כולל אפשרות להוריד קוד.</p>
+      <p>🤖 בקרוב: מערכת חדשה לזיהוי עצמים בתמונות בזמן אמת.</p>
+      <p>💡 יש לכם רעיונות או בקשות? כתבו לי ב־GitHub!</p>
+    </section>
   </main>
 
-  <!-- ✅ קישור מוסתר למפת האתר -->
   <a href="sitemap.xml" class="hidden-sitemap-link">מפת אתר</a>
 
   <footer>
-    © 2025 Itay Trank. כל הזכויות שמורות. אין להעתיק, לשכפל או להפיץ את התוכן ללא רשות.<br />
-    All rights reserved. Do not copy, reuse or redistribute without permission.
+    © 2025 Itay Trank. כל הזכויות שמורות.
   </footer>
+
+  <!-- script עם defer -->
+  <script defer>
+    function showSection(id, el) {
+      document.querySelectorAll("main section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      document.querySelectorAll(".topnav a").forEach(link => link.classList.remove("active"));
+      el.classList.add("active");
+    }
+  </script>
+
 </body>
 </html>
-
